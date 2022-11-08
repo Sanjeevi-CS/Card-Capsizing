@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f5dede;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+.container{
+    width: 300px;
+    height: 300px;
+    margin: 150px auto;
+    perspective: 800px;
+    position: relative;
+}
+.card{
+    width: 100%;      
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+.face{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+   backface-visibility: hidden;
+}
+.face--front{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.face--back{
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.card:hover{
+    transform: rotateY(180deg);
+}
+.vl>div{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 30px;
+}
+
